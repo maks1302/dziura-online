@@ -1,0 +1,16 @@
+{
+  "name": "Max Dziura - Portfolio",
+  "short_name": "Max Dziura",
+  "description": "Solo Developer & Entrepreneur - Building digital products and solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#252423",
+  "theme_color": "#252423",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
