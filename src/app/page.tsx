@@ -67,7 +67,7 @@ export default function Home() {
               
                           <div>
               <h3 className="text-sm text-gray-400 uppercase tracking-wider mb-3">
-                Featured Project
+                Featured Projects
               </h3>
               <a 
                 href="https://ideaharvester.app" 
