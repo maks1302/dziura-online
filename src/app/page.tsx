@@ -1,3 +1,4 @@
+'use client';
 
 import FadeIn from '@/components/FadeIn';
 
@@ -65,19 +66,19 @@ export default function Home() {
                 </div>
               </div>
               
-                          <div>
-              <h3 className="text-sm text-gray-400 uppercase tracking-wider mb-3">
-                Featured Projects
-              </h3>
-              <a 
-                href="https://ideaharvester.app" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                ideaharvester.app
-              </a>
-            </div>
+              <div>
+                <h3 className="text-sm text-gray-400 uppercase tracking-wider mb-3">
+                  Featured Projects
+                </h3>
+                <a 
+                  href="https://ideaharvester.app" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-300 hover:text-white transition-colors"
+                >
+                  ideaharvester.app
+                </a>
+              </div>
               
               <div className="text-xs text-gray-500">
                 Available for new opportunities
