@@ -38,7 +38,7 @@ export default function Home() {
                   Twitter
                 </a>
                 <a 
-                  href="https://t.me/username" 
+                  href="https://t.me/demploy" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
