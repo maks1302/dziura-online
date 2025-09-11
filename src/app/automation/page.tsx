@@ -2,6 +2,7 @@
 
 import FadeIn from '@/components/FadeIn';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Automation() {
@@ -43,12 +44,12 @@ export default function Automation() {
       {/* Back Button - Top Left */}
       <div className="absolute top-6 left-6 z-10">
         <FadeIn>
-          <a 
+          <Link 
             href="/"
             className="text-gray-300 hover:text-white transition-colors text-sm"
           >
             ← Back
-          </a>
+          </Link>
         </FadeIn>
       </div>
 
@@ -122,7 +123,7 @@ export default function Automation() {
                 
                 {isSubmitted ? (
                   <div className="text-green-400 text-sm">
-                    ✓ Thanks for subscribing! You'll receive automation templates soon.
+                    ✓ Thanks for subscribing! You&apos;ll receive automation templates soon.
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="flex gap-2">
