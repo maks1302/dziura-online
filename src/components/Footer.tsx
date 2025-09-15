@@ -5,8 +5,14 @@ export default function Footer() {
     <footer className="border-t border-gray-800 py-8">
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn>
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6">
+          <div className="flex flex-col gap-4">
+            {/* Desktop: Copyright left, Contact right | Mobile: Contact only */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="hidden sm:block text-sm text-gray-400">
+                © 2025 Max Dziura. All rights reserved.
+              </div>
+              
+              <div className="flex items-center gap-6">
               <a 
                 href="mailto:hi@dziura.online"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
@@ -51,9 +57,11 @@ export default function Footer() {
                 </svg>
                 <span className="hidden sm:inline">Telegram</span>
               </a>
+              </div>
             </div>
             
-            <div className="text-sm text-gray-400">
+            {/* Mobile: Copyright at bottom */}
+            <div className="block sm:hidden text-center text-sm text-gray-400">
               © 2025 Max Dziura. All rights reserved.
             </div>
           </div>
