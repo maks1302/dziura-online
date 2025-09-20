@@ -86,8 +86,16 @@ export default function Automation() {
                   </h3>
                   <div className="space-y-2">
                     <a 
+                      href="https://www.icloud.com/shortcuts/b3f8cdfde4f24a7a8522bd71c4945870"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-gray-300 hover:text-white underline hover:no-underline transition-all"
+                    >
+                      Tweet Reply Generator (IOS shortcut)
+                    </a>
+                    <a 
                       href="/automation/n8n-automated-x-twitter-reply-bot-workflow"
-                      className="text-sm text-gray-300 hover:text-white underline hover:no-underline transition-all"
+                      className="block text-sm text-gray-300 hover:text-white underline hover:no-underline transition-all"
                     >
                       N8N Twitter Reply Bot
                     </a>
