@@ -26,6 +26,26 @@ export default function Home() {
                   Building digital products and solutions. Focused on clean code, 
                   user experience, and turning ideas into reality.
                 </p>
+                {/* Prominent Blog Button */}
+                <div className="pt-2">
+                  <a
+                    href="https://blog.dziura.online/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-white text-black px-6 py-3 text-base lg:text-lg font-medium shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
+                    aria-label="Read my blog at blog.dziura.online"
+                  >
+                    Read the Blog
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path d="M5 12.75A.75.75 0 0 1 5.75 12h9.69l-3.72-3.72a.75.75 0 1 1 1.06-1.06l5 5a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 1 1-1.06-1.06l3.72-3.72H5.75A.75.75 0 0 1 5 12.75z" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </FadeIn>
             
