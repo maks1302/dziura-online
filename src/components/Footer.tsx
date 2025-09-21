@@ -1,11 +1,17 @@
 import FadeIn from './FadeIn';
+import SubscribeForm from './SubscribeForm';
 
 export default function Footer() {
   return (
     <footer className="border-t border-gray-800 py-8">
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
+            {/* Global Subscribe */}
+            <SubscribeForm
+              subtitle="Subscribe to receive updates on new projects and posts"
+              className="max-w-md mx-auto w-full"
+            />
             {/* Desktop: Copyright left, Contact right | Mobile: Contact only */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="hidden sm:block text-sm text-gray-400">
