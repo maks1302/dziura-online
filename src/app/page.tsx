@@ -30,8 +30,6 @@ export default function Home() {
                 <div className="pt-2">
                   <a
                     href="https://blog.dziura.online/"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-white text-black px-6 py-3 text-base lg:text-lg font-medium shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
                     aria-label="Read my blog at blog.dziura.online"
                   >
