@@ -15,7 +15,7 @@ export default function Footer() {
             {/* Desktop: Copyright left, Contact right | Mobile: Contact only */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="hidden sm:block text-sm text-gray-400">
-                © 2025 Max Dziura. All rights reserved.
+                © {new Date().getFullYear()} Max Dziura. All rights reserved.
               </div>
               
               <div className="flex items-center gap-6">
@@ -68,7 +68,7 @@ export default function Footer() {
             
             {/* Mobile: Copyright at bottom */}
             <div className="block sm:hidden text-center text-sm text-gray-400">
-              © 2025 Max Dziura. All rights reserved.
+              © {new Date().getFullYear()} Max Dziura. All rights reserved.
             </div>
           </div>
         </FadeIn>
