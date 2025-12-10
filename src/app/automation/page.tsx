@@ -61,12 +61,7 @@ export default function Automation() {
                     >
                       Tweet Reply Generator (IOS shortcut)
                     </a>
-                    <a 
-                      href="/automation/n8n-automated-x-twitter-reply-bot-workflow"
-                      className="block text-sm text-gray-300 hover:text-white underline hover:no-underline transition-all"
-                    >
-                      N8N Twitter Reply Bot
-                    </a>
+                    
                   </div>
                   <div className="text-xs text-gray-500 mt-2">
                     Intelligent automation workflows

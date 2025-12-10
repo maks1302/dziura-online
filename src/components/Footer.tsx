@@ -16,6 +16,7 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="hidden sm:block text-sm text-gray-400">
                 © {new Date().getFullYear()} Max Dziura. All rights reserved.
+                <a href="/privacy" className="ml-4 hover:text-white transition-colors">Privacy Policy</a>
               </div>
               
               <div className="flex items-center gap-6">
@@ -69,6 +70,7 @@ export default function Footer() {
             {/* Mobile: Copyright at bottom */}
             <div className="block sm:hidden text-center text-sm text-gray-400">
               © {new Date().getFullYear()} Max Dziura. All rights reserved.
+              <a href="/privacy" className="mt-2 block hover:text-white transition-colors">Privacy Policy</a>
             </div>
           </div>
         </FadeIn>
