@@ -30,7 +30,7 @@ export default function Home() {
                 <div className="pt-2">
                   <a
                     href="https://blog.dziura.online/"
-                    className="inline-flex items-center gap-2 rounded-full bg-white text-black px-6 py-3 text-base lg:text-lg font-medium shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
+                    className="inline-flex items-center gap-2 rounded bg-white text-black px-6 py-3 text-base lg:text-lg font-medium shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
                     aria-label="Read my blog at blog.dziura.online"
                   >
                     Read the Blog
@@ -58,7 +58,6 @@ export default function Home() {
                     <div className="text-sm text-gray-300">Web Development</div>
                     <div className="text-sm text-gray-300">Product Strategy</div>
                     <div className="text-sm text-gray-300">UI/UX Design</div>
-                    <div className="text-sm text-gray-300">Automations</div>
                   </div>
                 </div>
                 
@@ -74,6 +73,15 @@ export default function Home() {
                   >
                     ideaharvester.app
                   </a>
+                  <br />
+                  <a 
+                    href="https://apify.com/api-ninja" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-300 hover:text-white underline hover:no-underline transition-all"
+                  >
+                    My Apify API Actors 
+                  </a>
                 </div>
                 
                 <div className="text-xs text-gray-500">
@@ -82,25 +90,7 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            {/* Pages */}
-            <FadeIn delay={0.3}>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-sm text-gray-400 uppercase tracking-wider mb-3">
-                    Pages
-                  </h3>
-                  <div className="space-y-2">
-                    <a 
-                      href="/automation"
-                      className="text-sm text-gray-300 hover:text-white underline hover:no-underline transition-all"
-                    >
-                      Automation
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-            
+                        
           </div>
         </div>
       </div>
