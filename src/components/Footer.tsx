@@ -13,7 +13,7 @@ export default function Footer() {
               className="max-w-md mx-auto w-full"
             />
             {/* Desktop: Copyright left, Contact right | Mobile: Contact only */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
               <div className="hidden sm:block text-sm text-gray-400 whitespace-nowrap">
                 © {new Date().getFullYear()} Max Dziura. All rights reserved.
                 <a href="/privacy" className="ml-4 hover:text-white transition-colors whitespace-nowrap">Privacy Policy</a>
