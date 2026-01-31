@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
-import { BeehiivClient } from '@beehiiv/sdk';
+
 
 export async function POST(request: NextRequest) {
   try {
@@ -51,23 +51,36 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    // Subscribe to Beehiiv as well
-    const beehiivApiKey = process.env.BEEHIIV_API_KEY;
-    const beehiivPublicationId = process.env.BEEHIIV_PUBLICATION_ID; // e.g. "pub_********-****-****-****-************"
+    // Subscribe to Ghost
+    const ghostUrl = process.env.GHOST_URL;
+    const ghostJwt = process.env.GHOST_JWT_KEY;
 
-    if (!beehiivApiKey || !beehiivPublicationId) {
-      console.warn('Beehiiv not configured: missing BEEHIIV_API_KEY or BEEHIIV_PUBLICATION_ID');
+    if (!ghostUrl || !ghostJwt) {
+      console.warn('Ghost not configured: missing GHOST_URL or GHOST_JWT_KEY');
     } else {
       try {
-        const client = new BeehiivClient({ token: beehiivApiKey });
-        await client.subscriptions.create(beehiivPublicationId, {
-          email,
-          reactivate_existing: true,
-          send_welcome_email: false,
+        const baseUrl = ghostUrl.replace(/\/$/, '');
+        const response = await fetch(`${baseUrl}/ghost/api/admin/members/`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Ghost ${ghostJwt}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            members: [{
+              email,
+              note: 'subscribe via website',
+              labels: ['website']
+            }]
+          }),
         });
-      } catch (beehiivError) {
-        // Log and continue — do not fail the whole request if Beehiiv call fails
-        console.error('Beehiiv subscription error:', beehiivError);
+
+        if (!response.ok) {
+          const errorData = await response.text();
+          console.error('Ghost subscription error:', response.status, errorData);
+        }
+      } catch (ghostError) {
+        console.error('Ghost subscription network error:', ghostError);
       }
     }
 
