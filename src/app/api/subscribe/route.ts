@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
+import jwt from 'jsonwebtoken';
 
 
 export async function POST(request: NextRequest) {
@@ -53,17 +54,25 @@ export async function POST(request: NextRequest) {
 
     // Subscribe to Ghost
     const ghostUrl = process.env.GHOST_URL;
-    const ghostJwt = process.env.GHOST_JWT_KEY;
+    const ghostApiKey = process.env.GHOST_API_KEY;
 
-    if (!ghostUrl || !ghostJwt) {
-      console.warn('Ghost not configured: missing GHOST_URL or GHOST_JWT_KEY');
+    if (!ghostUrl || !ghostApiKey) {
+      console.warn('Ghost not configured: missing GHOST_URL or GHOST_API_KEY');
     } else {
       try {
+        const [id, secret] = ghostApiKey.split(':');
+        const token = jwt.sign({}, Buffer.from(secret, 'hex'), {
+          keyid: id,
+          algorithm: 'HS256',
+          expiresIn: '5m',
+          audience: '/admin/',
+        });
+
         const baseUrl = ghostUrl.replace(/\/$/, '');
         const response = await fetch(`${baseUrl}/ghost/api/admin/members/`, {
           method: 'POST',
           headers: {
-            'Authorization': `Ghost ${ghostJwt}`,
+            'Authorization': `Ghost ${token}`,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
