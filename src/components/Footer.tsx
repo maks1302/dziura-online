@@ -65,6 +65,18 @@ export default function Footer() {
                 <span className="hidden sm:inline">Telegram</span>
               </a>
               <a 
+                href="https://docs.dziura.online" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+                <span className="hidden sm:inline">Docs</span>
+              </a>
+              <a 
                 href="https://buymeacoffee.com/dziura" 
                 target="_blank"
                 rel="noopener noreferrer"
